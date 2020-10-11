@@ -6,7 +6,7 @@ const CharacterGrid = ({ characters, loading }) => {
   ) : (
     <section className="cards">
       {characters.map((char) => (
-        <h2>{char.name}</h2>
+        <h2 key={char.char_id}>{char.name}</h2>
       ))}
     </section>
   );
