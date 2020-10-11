@@ -9,6 +9,7 @@ const Search = (props) => {
           type="text"
           className="form-control"
           placeholder="Search for a character"
+          autoFocus
         ></input>
       </form>
     </section>
