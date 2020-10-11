@@ -9,8 +9,11 @@ const App = () => {
 
   useEffect(() => {
     const fetchCharacters = async () => {
-      const result = await axios.get(`https://www.breakingbadapi.com/api/`);
-      console.log(result.data);
+      const result = await axios.get(
+        `https://www.breakingbadapi.com/api/characters`
+      );
+      setCharacters(result.data);
+      setLoading(false);
     };
     fetchCharacters();
   }, []);
