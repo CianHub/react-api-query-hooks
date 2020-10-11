@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Search = (props) => {
+  const [text, setText] = useState('');
   return (
     <section className="search">
       <form>
@@ -10,6 +11,8 @@ const Search = (props) => {
           className="form-control"
           placeholder="Search for a character"
           autoFocus
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         ></input>
       </form>
     </section>
