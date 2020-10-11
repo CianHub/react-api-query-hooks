@@ -8,22 +8,23 @@ import Search from './components/Search';
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const fetchCharacters = async () => {
       const result = await axios.get(
-        `https://www.breakingbadapi.com/api/characters`
+        `https://www.breakingbadapi.com/api/characters?name=${query}`
       );
       setCharacters(result.data);
       setLoading(false);
     };
     fetchCharacters();
-  }, []);
+  }, [query]);
 
   return (
     <div className="container">
       <Header></Header>
-      <Search></Search>
+      <Search setQuery={setQuery}></Search>
       <CharacterGrid characters={characters} loading={loading}></CharacterGrid>
     </div>
   );
