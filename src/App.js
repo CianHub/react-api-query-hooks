@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="container">
       <Header></Header>
-      <CharacterGrid character={characters} loading={loading}></CharacterGrid>
+      <CharacterGrid characters={characters} loading={loading}></CharacterGrid>
     </div>
   );
 };
