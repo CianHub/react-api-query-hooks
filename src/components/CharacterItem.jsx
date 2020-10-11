@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CharacterItem = (props) => {
-  return <div></div>;
+const CharacterItem = ({ character }) => {
+  return <div>{character.name}</div>;
 };
 
-CharacterItem.propTypes = {};
+CharacterItem.propTypes = { character: PropTypes.object };
 
 export default CharacterItem;

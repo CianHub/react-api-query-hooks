@@ -1,4 +1,5 @@
 import React from 'react';
+import CharacterItem from './CharacterItem';
 
 const CharacterGrid = ({ characters, loading }) => {
   return loading ? (
@@ -6,7 +7,7 @@ const CharacterGrid = ({ characters, loading }) => {
   ) : (
     <section className="cards">
       {characters.map((char) => (
-        <h2 key={char.char_id}>{char.name}</h2>
+        <CharacterItem key={char.char_id} character={char}></CharacterItem>
       ))}
     </section>
   );
