@@ -2,7 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CharacterItem = ({ character }) => {
-  return <div>{character.name}</div>;
+  return (
+    <div className="card">
+      <div className="card-inner">
+        <div className="card-front">
+          <img src={character.img} alt="" />
+        </div>
+        <div className="card-back">
+          <h1>{character.name}</h1>
+          <ul>
+            <li>
+              <strong>Actor Name:</strong> {character.portrayed}
+            </li>
+            <li>
+              <strong>Nickname:</strong> {character.nickname}
+            </li>
+            <li>
+              <strong>Birthday:</strong> {character.birthday}
+            </li>
+            <li>
+              <strong>Status:</strong> {character.status}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 CharacterItem.propTypes = { character: PropTypes.object };
