@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import axios from 'axios';
-import CharacterGrid from './components/Character-grid';
+import CharacterGrid from './components/CharacterGrid';
 import Search from './components/Search';
 
 const App = () => {
